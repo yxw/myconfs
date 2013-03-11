@@ -1,0 +1,20 @@
+startup_message off
+# Look and feel
+caption always "%{= bb}%{+b w}Screen: %n | %h %=%t %c"
+hardstatus alwayslastline "%-Lw%{= BW}%50>%n%f* %t%{-}%+Lw%<"
+
+# Our warning of activity
+activity "Activity in %t(%n)"
+
+# Left Right meta key mods
+#ALT-,. and ALT-<>
+bindkey "^[<" eval number !echo $WINDOW-1|bc
+bindkey "^[>" eval number !echo $WINDOW+1|bc
+bindkey "^[," prev
+bindkey "^[." next
+
+autodetach on
+
+defscrollback 65000
+# screen -t "log" 0 tail -F /var/log/messages
+# screen -t "errors" 1 sh -c "tail -F /var/log/httpd/*error*.log"
