@@ -1,0 +1,6 @@
+[submodule "solarized"]
+	path = solarized
+	url = https://github.com/brianmichel/solarized.git
+[submodule "intellij-colors-solarized"]
+	path = intellij-colors-solarized
+	url = https://github.com/jkaving/intellij-colors-solarized.git
