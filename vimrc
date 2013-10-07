@@ -137,6 +137,13 @@ set nocompatible                " choose no compatibility with legacy vi
     let g:solarized_termcolors=16
     colorscheme solarized
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Files and backups
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Turn backup off
+set nobackup
+set nowb
+set noswapfile
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" => Moves
