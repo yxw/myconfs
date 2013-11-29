@@ -123,20 +123,6 @@ set nocompatible                " choose no compatibility with legacy vi
     "Format the statusline
     set statusline=\ %F%m%r%h\ %w\ \ CWD:\ %r%{CurDir()}%h\ \ \ Line:\ %l/%L:%c
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"" => Colors and Fonts
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-    "" coloring use solarized color scheme
-    syntax enable
-    " Assume a dark background for terminal and light for GUI
-    if has('gui_running')
-        set background=light
-    else
-        set background=dark
-    endif
-    let g:solarized_termcolors=16
-    colorscheme solarized
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files and backups
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -150,3 +136,29 @@ set noswapfile
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     "Set 5 lines to the curors - when moving vertical..
     set so=5
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" => Plug-ins
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    """ pathogen.vim
+    execute pathogen#infect()
+
+    """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    "" => Colors and Fonts
+    """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    "" coloring use solarized color scheme
+    syntax enable
+    " Assume a dark background for terminal and light for GUI
+    if has('gui_running')
+        set background=light
+    else
+       set background=dark
+    endif
+    let g:solarized_termcolors=16
+    colorscheme solarized
+
+    """ Settings for twitvim
+    "let twitvim_browser_cmd = '/usr/bin/firefox'
+    let twitvim_force_ssl = 1
+
