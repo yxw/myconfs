@@ -12,7 +12,8 @@ mv vim-colors-solarized ~/.vim/bundle/
 # echo "\nsyntax enable\nset background=dark\nset t_Co=16\nlet g:solarized_termcolors=16\ncolorscheme solarized\n" >> ~/.vimrc
 
 platform='unknown'
-unamestr=`uname`
+#unamestr=`uname`
+unamestr = $(uname) # better than the above line
 if [[ "$unamestr" == 'Linux' ]]; then
    platform='linux'
 #elif [[ "$unamestr" == 'FreeBSD' ]]; then
