@@ -66,7 +66,13 @@ set nocompatible                " choose no compatibility with legacy vi
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    " Encodings
+    
+    " make vim recognize different kinds of file encodings
+    let &termencoding=&encoding
+    set fileencodings=utf-8,gbk,ucs-bom,cp936
     set encoding=utf-8
+
     set showcmd                     " display incomplete commands
     filetype plugin indent on       " load file type plugins + indentation
     set nu                          " Line numbers on
