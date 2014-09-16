@@ -158,6 +158,16 @@ set noswapfile
     " Assume a dark background for terminal and light for GUI
     if has('gui_running')
         set background=light
+        
+        " Font setting on different platform
+        if has("gui_gtk2")
+            set guifont=Inconsolata\ 12
+        elseif has("gui_macvim")
+            set guifont=Menlo\ Regular:h14
+        elseif has("gui_win32")
+            set guifont=Consolas:h11:cANSI
+        endif
+        
     else
        set background=dark
     endif
