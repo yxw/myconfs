@@ -72,6 +72,8 @@ set nocompatible                " choose no compatibility with legacy vi
     let &termencoding=&encoding
     set fileencodings=utf-8,gbk,ucs-bom,cp936
     set encoding=utf-8
+    set guifontwide=NSimSun
+
 
     set showcmd                     " display incomplete commands
     filetype plugin indent on       " load file type plugins + indentation
